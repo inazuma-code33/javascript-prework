@@ -1,46 +1,28 @@
-
-let computerMove = getMoveName(randomNumber); `kamień`;
-if(2 > 3){
-	printMessage('Niesamowite! Jeden jest większe niż dwa!!!');
-} else if (1 == 3) {
-	printMessage('Dziwne – jeden jest równe dwa?!');
-} else {
-	printMessage('Wszystko po staremu, jeden jest mniejsze niż dwa.');
+function getMoveName(move) {
+  if (move == '1') {
+    return 'kamień';
+  } else if (move == '2') {
+    return 'papier';
+  } else if (move == '3') {
+    return 'nożyce';
+  }
 }
 
-let playerMove = "papier" ;
-if(playerInput == '1'){
-    playerMove = 'kamień';
-  }
-  if(playerInput == '2'){
-    playerMove = 'Papier';
-  }
-  if(playerInput == '3'){
-    playerMove = 'Nożyce';
-  }
-printMessage('Twój ruch to: ' + playerMove);
+function displayResult(argComputerMove, argPlayerMove) {
 
-printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to papier, to wygrywasz!');
-// Argument wyświetlenia Tekstu chyba
-
-let randomFraction = Math.random();
-
-printMessage('Wylosowany ułamek to: ' + randomFraction);
-
-let calculation = randomFraction * 3 + 1;
-
-printMessage('Ułamek pomnożony przez 3 i powiększony o 1: ' + calculation);
-
-let roundNumber = Math.floor(calculation);
-
-printMessage('Liczba po zaokrągleniu w dół to: ' + roundNumber);
-
-
-if( computerMove == 'kamień' && playerMove == 'papier'){
-    printMessage('Ty wygrywasz!');
+  if (argPlayerMove == argComputerMove) {
+    printMessage('REMIS');
+  } else if (argPlayerMove == 'kamień' && argComputerMove == 'papier') {
+    printMessage('Wygrywa komputer');
   }
 
+}
+
+let randomNumber = Math.floor(Math.random() * 3 + 1);
+
+let computerMove = getMoveName(randomNumber);
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+let playerMove = getMoveName(playerInput);
 
-console.log('Gracz wpisał: ' + playerInput);
 
+displayResult(computerMove, playerMove);
