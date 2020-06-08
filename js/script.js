@@ -1,5 +1,5 @@
 
-let computerMove = `kamień`;
+let computerMove = getMoveName(randomNumber); `kamień`;
 if(2 > 3){
 	printMessage('Niesamowite! Jeden jest większe niż dwa!!!');
 } else if (1 == 3) {
@@ -7,10 +7,16 @@ if(2 > 3){
 } else {
 	printMessage('Wszystko po staremu, jeden jest mniejsze niż dwa.');
 }
-let playerMove = "papier" ;
 
+let playerMove = "papier" ;
 if(playerInput == '1'){
     playerMove = 'kamień';
+  }
+  if(playerInput == '2'){
+    playerMove = 'Papier';
+  }
+  if(playerInput == '3'){
+    playerMove = 'Nożyce';
   }
 printMessage('Twój ruch to: ' + playerMove);
 
@@ -37,3 +43,4 @@ if( computerMove == 'kamień' && playerMove == 'papier'){
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
 console.log('Gracz wpisał: ' + playerInput);
+
