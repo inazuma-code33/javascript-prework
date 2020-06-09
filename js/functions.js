@@ -7,8 +7,3 @@ function printMessage(msg){
 function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
 }
-function buttonClicked(){
-	printMessage('Guzik został kliknięty');
-  }
-  let testButton = document.getElementById('test-button');
-  testButton.addEventListener('click', buttonClicked);
