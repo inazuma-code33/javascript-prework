@@ -20,6 +20,20 @@ function displayResult(argComputerMove, argPlayerMove) {
   }
 }
 
+function playGame(playerMove) {
+  clearMessages();
+
+  const compMove = getCompMove();
+  // porownanie ruchów
+  if (playerMove === compMove) {
+      displayResult(...);
+  }
+  itd
+}
+
+paperButton.addEventListener('click', () => {
+   playGame('paper'); 
+})
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 
 let computerMove = getMoveName(randomNumber);
