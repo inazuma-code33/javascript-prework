@@ -1,0 +1,16 @@
+.txt {
+    color: blue;
+    text-align: center;
+    text-decoration: blue;
+}
+#buttons {
+
+}
+#test-button {
+    
+}
+.container {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}

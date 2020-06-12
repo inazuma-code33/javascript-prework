@@ -1,3 +1,4 @@
+console.log("Action");
 function playGame(playerMove) {
   clearMessages();
 
@@ -36,4 +37,3 @@ function displayResult(argComputerMove, argPlayerMove) {
   }
 }
 
-console.log("What don't work");
