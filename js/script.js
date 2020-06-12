@@ -9,7 +9,7 @@ function playGame(playerMove) {
   let randomNumber = Math.floor(Math.random() * 3 + 1);
   let computerMove = getMoveName(randomNumber);
   //let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
-  let playerMove = getMoveName(playerInput);
+  //let playerMove = getMoveName(playerInput);
   let testButton = document.getElementById('test-button');
   testButton.addEventListener('click', buttonClicked);
   displayResult(computerMove, playerMove);
@@ -24,7 +24,7 @@ function getMoveName(move) {
     return 'nożyce';
   }
 }
-console.log(object);
+
 
 function displayResult(argComputerMove, argPlayerMove) {
   if (argPlayerMove == argComputerMove) {
@@ -35,3 +35,5 @@ function displayResult(argComputerMove, argPlayerMove) {
     printMessage('Wygrywa komputer');
   }
 }
+
+console.log("What don't work");
