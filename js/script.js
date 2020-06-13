@@ -1,7 +1,8 @@
 console.log("Action");
+let testButton = document.getElementById('test-button');
+  testButton.addEventListener('click', buttonClicked);
 function playGame(playerMove) {
   clearMessages();
-
   const compMove = getCompMove();
   // porownanie ruchów
   if (playerMove === compMove) {
@@ -11,8 +12,8 @@ function playGame(playerMove) {
   let computerMove = getMoveName(randomNumber);
   //let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
   //let playerMove = getMoveName(playerInput);
-  let testButton = document.getElementById('test-button');
-  testButton.addEventListener('click', buttonClicked);
+ /* let testButton = document.getElementById('test-button');
+  testButton.addEventListener('click', buttonClicked);*/
   displayResult(computerMove, playerMove);
 }
 
